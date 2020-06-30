@@ -1,0 +1,23 @@
+{
+  "name": "never-forget-a-face",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/McGowanC/never-forget-a-face.git"
+  },
+  "author": "Craig",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/McGowanC/never-forget-a-face/issues"
+  },
+  "homepage": "https://github.com/McGowanC/never-forget-a-face#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "images-scraper": "^5.0.7"
+  }
+}
