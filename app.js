@@ -1,22 +1,21 @@
 const express = require('express')
 const app = express()
 const port = 3000
-const Scraper = require('images-scraper')
+const scrape = require('./image-scraper')
 
-app.get('/', (req, res) => res.send('Hello World!'));
 
-// ! one route
+// ! one route to rule them all
 app.get("/hello", (req, res) =>{
-    const google = new Scraper({
-        puppeteer: {
-          headless: true,
-        }
-      });
-       
-      (async () => {
-        const results = await google.scrape('Samantha Peppard', 3);
-        console.log('results', results);
-      })();
+    res.header("Access-Control-Allow-Origin", "*");
+    let toSearch = req.query.toSearch;
+    console.log("pinged hello route");
+    async function grabImages(searchQuery){
+        let response = await scrape.hello(searchQuery);
+        await console.log(response);
+        await res.send(response);
+    }
+    grabImages(toSearch);
+
 } )
 
 app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))
