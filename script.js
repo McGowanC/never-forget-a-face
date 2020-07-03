@@ -27,6 +27,7 @@ function htmlNodeBuilder(array){
     });
 
     let div = document.createElement('div');
+    div.classList.add('image-container');
     div.innerHTML = htmlBuilt;
     document.querySelector('main').appendChild(div);
 }
