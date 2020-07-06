@@ -1,6 +1,6 @@
 //stop submit button normal functino, and manually set HTTP request
 let submitButton = document.querySelector("button[type=submit]");
-submitButton.innerHTML = "yes"
+
 submitButton.addEventListener('click', function(event){
     //grba form data
     let formEntry = document.querySelector("input[type=text]").value;
