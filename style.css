@@ -1,0 +1,81 @@
+/** Universal boilerplate to change to border-box **/
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+
+  body {
+    border: 2px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "nav nav nav nav"
+        ". main main ."
+        "img-container img-container img-container img-container"
+}
+
+nav {
+    background-color:#81d4fa;
+    padding: 10px 0 10px 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size:1.5;
+    grid-area: nav;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+nav a {
+    text-decoration: none;
+    padding-right: 20px;
+}
+
+main {
+    grid-area: main;
+    padding-bottom: 600px;
+}
+
+
+
+.image-container {
+    padding: 20px 0 0 0;
+    grid-area: img-container;
+    display:flex; 
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.image-container img {
+    width: auto;
+    max-height: 200px;
+    border: 2px solid black;
+}
+
+h1 {
+    color: #4ba3c7;
+    font-size:3em;
+    font-family: 'Quicksand', sans-serif;
+}
+
+main p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+main form {
+    font-family: "Montserrat", sans-serif;
+}
+
+.nav-title {
+    padding-left: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+
+}
+
+form {
+}

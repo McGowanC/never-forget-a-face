@@ -9,7 +9,10 @@
         <title>Never Forget a Face</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="style.css">
+
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -23,16 +26,22 @@
         Todo: check if form is properly being sent off
 
     -->
+
+    <nav>
+        <a><span class="nav-title">Never Forget a Face</span></a>
+        <a href="">Created by Craig M</a>
+    </nav>
+
     <main>
-        <h1>Do you have trouble remembering faces?</h1>
+        <h1>Do you have trouble <br> remembering faces?</h1>
         <p>Everyone does, don't be hard on yourself. Maybe it was a quick introduction, or you met so many people it's tough to keep track. Well, with only a couple pieces of information, we can help you ALWAYS remember a face. How? Something called spaced reptition learning.</p>
         <form action="/app.js" method="POST">
             <label for="search-parameters">Enter some info like Name, Job, or City:</label>
             <input type="text" id="search-parameters" name="search-parameters">
-            <button type="submit">Send your message</button>
+            <button type="submit">Search</button>
         </form>
      
-        
+    <div class="image-container"></div>
     </main>
         
 
