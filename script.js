@@ -1,10 +1,13 @@
 //stop submit button normal functino, and manually set HTTP request
 let submitButton = document.querySelector("button[type=submit]");
-
+submitButton.innerHTML = "yes";
 submitButton.addEventListener('click', function(event){
     //grba form data
+    let div = document.querySelector('div.image-container');
+    div.style.justifyContent = "center"
+    div.innerHTML = "<img src='loading3.gif' style='border-style:none'>"
     let formEntry = document.querySelector("input[type=text]").value;
-    
+    console.log(formEntry);
     event.preventDefault();
 
     const Http = new XMLHttpRequest();
@@ -14,7 +17,7 @@ submitButton.addEventListener('click', function(event){
     Http.send();
 
     Http.onload = () => {
-        //console.log(Http.response)
+        console.log(Http.response)
         htmlNodeBuilder(Http.response);
     }
 
@@ -26,8 +29,14 @@ function htmlNodeBuilder(array){
         htmlBuilt += `<img src=${element.url}>`
     });
 
-    let div = document.createElement('div');
-    div.classList.add('image-container');
+    let div = document.querySelector('div.image-container');
+    div.style.justifyContent = "space-between"
     div.innerHTML = htmlBuilt;
-    document.querySelector('main').appendChild(div);
+}
+
+//add event listener
+{
+let div = document.querySelector('div.image-container')
+div.addEventListener("click", (e) => {
+})
 }

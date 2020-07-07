@@ -13,6 +13,7 @@
     grid-template-areas:
         "nav nav nav nav"
         ". main main ."
+        "img-container img-container img-container img-container"
 }
 
 nav {
@@ -34,22 +35,23 @@ nav a {
 
 main {
     grid-area: main;
+    padding-bottom: 600px;
 }
 
 
 
 .image-container {
+    padding: 20px 0 0 0;
+    grid-area: img-container;
     display:flex; 
     flex-direction: row;
-    justify-content: space-evenly;
-    width: 100%;
+    justify-content: space-between;
 
 }
 
 .image-container img {
     width: auto;
-    height: 350px;
-    padding: 20px;
+    max-height: 200px;
     border: 2px solid black;
 }
 
@@ -76,5 +78,4 @@ main form {
 }
 
 form {
-    padding-bottom: 300px;
 }
