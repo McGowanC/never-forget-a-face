@@ -41,9 +41,41 @@
             <button type="submit">Search</button>
         </form>
      
-    <div class="image-container"></div>
+    <div class="image-container">
+        <div class="square bluesquare"></div>
+        <div class="square redsquare"></div>
+        <div class="square greensquare"></div>
+    </div>
     </main>
-        
+    
+    <div class="modal">
+
+        <div class="modal-content">
+            <h3>Make sure the info is correct, then hit save!</h3>
+            <img src="" alt="" class="person-image-modal">
+            <form action="">
+
+                <p>
+                    <label for="first-name">First Name:</label>
+                    <input type="text" name="first-name" id="first-name" class="first-name">
+                </p>
+                
+                <p>
+                    <label for="last-name">Last Name:</label>
+                    <input type="text" name="last-name" id="last-name" class="last-name">
+                </p>
+
+                <p>
+                    <label for="other-info">Other Info:</label>
+                    <input type="text" name="other-info" id="other-info" class="other-info">
+                </p>
+
+            </form>
+
+            <button class="modal-save">Save!</button>
+
+        </div>
+    </div>
 
         
         <script src="script.js" async defer></script>
